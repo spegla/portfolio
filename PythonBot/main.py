@@ -6,8 +6,7 @@ def main():
    pyautogui.FAILSAFE = True
     
     #Countdown timer
-    print("Starting")
-    print("Starting")
+    print("Starting", end="")
     for i in range(0, 10):
         print(".", end="")
         time.sleep(1)
@@ -15,7 +14,7 @@ def main():
     
     # Do anything
     pyautogui.keyDown('2')   
-    time.sleep(1)
+    time.sleep(2)
     pyautogui.keyDown('2')
         
     
