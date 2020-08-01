@@ -8,9 +8,9 @@ names ="My name is Nikola"
 names5 = "this variable contains 5 different values"
 
 #error do not use @
-place@ = "this is a Pune"
+##place@ = "this is a Pune"
 
 #error do not assign predefined quote when is gree its OK red not ok :)
 
-quote = "this is a beautiful day"
+##quote = "this is a beautiful day"
 
