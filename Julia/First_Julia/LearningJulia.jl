@@ -1,7 +1,8 @@
+
 #correct Variable Names
 
-names ="My name is Nikola"
 
+names ="My name is Nikola"
 
 #error do not use 5names for variable names
 names5 = "this variable contains 5 different values"
@@ -13,4 +14,3 @@ place@ = "this is a Pune"
 
 quote = "this is a beautiful day"
 
-sales_2018_may 
