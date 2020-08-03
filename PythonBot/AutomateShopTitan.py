@@ -5,7 +5,7 @@ import time, sys, random
 
 
 
-for all in range(0,5):
+for all in range(0,50):
     
     #pydirectinput.moveTo(100, 150)
     #pyautogui.mouseDown(1000,735)
@@ -44,22 +44,50 @@ for all in range(0,5):
         #time.sleep(1)
     ##########################################
     #Random & if statement
-    RandomCraft.random(1,1,10)
-    if RandomCraft = 
-    ######## Craft new item  #############
-    for craft in range(0,5):
-        # craft 
-        #odaberem craft
-        pyautogui.click(x=1076,y=738)
-        time.sleep(1)
-        #odaberem bow
-        pyautogui.click(x=236,y=805)
-        time.sleep(1)
-        #5 time click for crafting
-        pyautogui.click(x=434,y=682)
-        
-    ##########################################
+    RandomCraft = random.randint(1,3)
+    if RandomCraft == 2:
+        ######## Craft new item Bow #############
+        for craft in range(0,5):
+            # craft 
+            #odaberem craft
+            pyautogui.click(x=1076,y=738)
+            time.sleep(1)
+            #odaberem bow
+            pyautogui.click(x=236,y=805)
+            time.sleep(1)
+            #5 time click for crafting
+            pyautogui.click(x=434,y=682)
+            
+        ##########################################
+    elif RandomCraft > 2:
+        ######## Craft new item Knifes #############
+        for craft in range(0,5):
+            # craft 
+            #odaberem craft
+            pyautogui.click(x=1076,y=738)
+            time.sleep(1)
+            #odaberem knife
+            pyautogui.click(x=112,y=801)
+            time.sleep(1)
+            #click on ice picker
+            pyautogui.click(x=678,y=690)
+            
+        ##########################################
+    else:
+        ######## Craft new item swords  #############
+        for craft in range(0,5):
+            # craft 
+            #odaberem craft
+            pyautogui.click(x=1076,y=738)
+            time.sleep(1)
+            #odaberem swords
+            pyautogui.click(x=30,y=805)
+            time.sleep(1)
+            #5 time click for crafting
+            pyautogui.click(x=556,y=696)
+            
+        ##########################################
     #blanko
     pyautogui.click(x=871,y=550)
-    time.sleep(70)
+    time.sleep(120)
     

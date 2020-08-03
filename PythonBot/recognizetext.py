@@ -13,6 +13,6 @@ import random
 #pyautogui.locateOnScreen('googlelogo_color_272x92dp.png', region=(0,0, 300, 400))
 
 #button7location = pyautogui.locateOnScreen('googlelogo_color_272x92dp.png')
-r = random.randint(1,10)
-RandomCraft = random.randint(1,10)
+
+RandomCraft = random.randint(1,3)
 print(RandomCraft)
