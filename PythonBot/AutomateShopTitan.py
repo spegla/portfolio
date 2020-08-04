@@ -3,91 +3,92 @@ import pyautogui
 import webbrowser   
 import time, sys, random
 
-
-
-for all in range(0,50):
+def initializePyAutoGUI():
+    # Initialized PyAutoGUI
+    # https://pyautogui.readthedocs.io/en/latest/introduction.html
+    # When fail-safe mode is True, moving the mouse to the upper-left corner will abort your program.
+    pyautogui.FAILSAFE = True
+time.sleep(1)
+for CeoCiklusOd250Minuta in range(0,20):
+    #time.sleep(1)
+    ClickToStartSell = [687,136]
+    ClickToSmallTalk = [373,521]
+    ClickToSuggest = [414,462]
+    ClickToSell = [764,586]
     
-    #pydirectinput.moveTo(100, 150)
-    #pyautogui.mouseDown(1000,735)
-    #pyautogui.click(x=1008, y=742)
-    time.sleep(1)
-    ######## finish crafted item #############
-    #finish crafted item
-    for PickupCraft in range(0,10):
-        pyautogui.click(x=1008, y=742)
-        time.sleep(1)
-        #Collect click if have
-        pyautogui.click(478,636)
-        #new stuff confirmation
-        pyautogui.click(x=580,y=786)
-        #time.sleep(1)
-    ##########################################    
-
-    ######## sell & surcharge item #############
-    #seller first contact
-    #pyautogui.click(x=698,y=235)
-    pyautogui.click(x=674,y=201)
-    time.sleep(1)
-    for sell in range(0,7):
-        #small talk
-        pyautogui.click(x=359,y=506)
-        #suggest
-        pyautogui.click(x=405,y=443)
-        time.sleep(1)
-        #surcharge
-        pyautogui.click(x=782,y=520)
-        time.sleep(1)
-        #sell/buy
-        pyautogui.click(x=760,y=570)
-        #
-        
-        #time.sleep(1)
+    PickupCraft = [1010,766]
+    PickupConfirmCollect = [484,656]
+    BluePrintConfirm = [570,819]
+    Reconnect = [574,502]
+    
+    CliclToStartCraft = [1078,754]
+    Weapon  = [965,837]
+    Armor = [1018,841]
+    Potion = [1073,839]
+    WeaponKnife = [113,834]
+    
+    WeaponKnifeIcePick = [687,732]
+    WeaponKnifeSwiftBlade = [557,709]
+    WeaponBow = [237,836]
+    WeaponBowWlmwood =[447,736]
+    
+    ######## finish crafted item  #############
+    pyautogui.click(Reconnect)
+    for PickupCr in range(0,10):
+        pyautogui.click(PickupCraft)
+        pyautogui.click(PickupConfirmCollect)
+        pyautogui.click(BluePrintConfirm)
+        time.sleep(.15)
     ##########################################
-    #Random & if statement
-    RandomCraft = random.randint(1,3)
-    if RandomCraft == 2:
-        ######## Craft new item Bow #############
-        for craft in range(0,5):
-            # craft 
-            #odaberem craft
-            pyautogui.click(x=1076,y=738)
-            time.sleep(1)
-            #odaberem bow
-            pyautogui.click(x=236,y=805)
-            time.sleep(1)
-            #5 time click for crafting
-            pyautogui.click(x=434,y=682)
-            
-        ##########################################
-    elif RandomCraft > 2:
-        ######## Craft new item Knifes #############
-        for craft in range(0,5):
-            # craft 
-            #odaberem craft
-            pyautogui.click(x=1076,y=738)
-            time.sleep(1)
-            #odaberem knife
-            pyautogui.click(x=112,y=801)
-            time.sleep(1)
-            #click on ice picker
-            pyautogui.click(x=678,y=690)
-            
-        ##########################################
-    else:
-        ######## Craft new item swords  #############
-        for craft in range(0,5):
-            # craft 
-            #odaberem craft
-            pyautogui.click(x=1076,y=738)
-            time.sleep(1)
-            #odaberem swords
-            pyautogui.click(x=30,y=805)
-            time.sleep(1)
-            #5 time click for crafting
-            pyautogui.click(x=556,y=696)
-            
-        ##########################################
-    #blanko
-    pyautogui.click(x=871,y=550)
-    time.sleep(120)
+    ######## sell & surcharge item #############
+    for selling in range(0,10):
+        pyautogui.click(ClickToStartSell)
+        time.sleep(.15)
+        pyautogui.click(ClickToSmallTalk)
+        time.sleep(.15)
+        pyautogui.click(ClickToSuggest)
+        time.sleep(.15)
+        pyautogui.click(ClickToSell)
+        time.sleep(.15)
+    # ######## crafting #############
+    # RandomCraft = random.randint(1,3)
     
+    # if RandomCraft == 2:
+    #     ######## Craft new item Bow #############
+    #     pyautogui.click(CliclToStartCraft)
+    #     for BowCraft in range(0,5):
+    #         #pyautogui.click(CliclToStartCraft)
+    #         pyautogui.click(Weapon)
+    #         time.sleep(0.2)
+    #         pyautogui.click(WeaponBow)
+    #         time.sleep(0.2)
+    #         pyautogui.click(WeaponBowWlmwood)
+    #         time.sleep(0.2)
+    #     ##########################################
+    # elif RandomCraft > 2:
+    #     ######## Craft new item Knifes #############
+    #     pyautogui.click(CliclToStartCraft)
+    #     for KnifeCraft in range(0,5):
+    #         #pyautogui.click(CliclToStartCraft)
+    #         pyautogui.click(Weapon)
+    #         time.sleep(0.2)
+    #         pyautogui.click(WeaponKnife)
+    #         time.sleep(0.2)
+    #         pyautogui.click(WeaponKnifeIcePick)
+    #         time.sleep(0.2)
+    #     ##########################################
+    # else:
+    #     ######## Craft new item swords  #############
+    #     pyautogui.click(CliclToStartCraft)
+    #     for KnifeCraft in range(0,5):
+    #         #pyautogui.click(CliclToStartCraft)
+    #         pyautogui.click(Weapon)
+    #         time.sleep(0.2)
+    #         pyautogui.click(WeaponKnife)
+    #         time.sleep(0.2)
+    #         pyautogui.click(WeaponKnifeSwiftBlade)
+    #         time.sleep(0.2)
+    #     ##########################################    
+    
+    #pyautogui.click(x=871,y=400)
+    time.sleep(100)
