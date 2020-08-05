@@ -3,7 +3,7 @@ import pyautogui
 import webbrowser   
 import time, sys, random
 
-DELAY_BETWEEN_COMMANDS = 0.2
+DELAY_BETWEEN_COMMANDS = 0.5
 
 
 def initializePyAutoGUI():
@@ -62,6 +62,7 @@ for CeoCiklusOd250Minuta in range(0,50):
         pyautogui.click(ClickToSmallTalk)
         pyautogui.click(ClickToSuggest)
         pyautogui.click(ClickToSell)
+        pyautogui.click(x=1096,y=450)
     ######## crafting #############
     RandomCraftType = random.randint(1,3)
     RandomCraftWeapon = random.randint(1,3)
@@ -69,14 +70,14 @@ for CeoCiklusOd250Minuta in range(0,50):
         ######## Craft new item Bow #############
         #pyautogui.click(CliclToStartCraft)
         pyautogui.press('space')
-        for WCraft in range(0,5):
+        for WCraft in range(0,6):
             if RandomCraftWeapon == 2:
-                for craftweapon in range(0,5):
+                #for craftweapon in range(0,5):
                     pyautogui.click(Weapon)
                     pyautogui.click(WeaponBow)
                     pyautogui.click(WeaponBowWlmwood)
             elif RandomCraftWeapon >2:
-                for craftweapon in range(0,5):
+                #for craftweapon in range(0,5):
                     pyautogui.click(Weapon)
                     pyautogui.click(WeaponBow)
                     pyautogui.click(WeaponBowReflexBow)
@@ -91,14 +92,14 @@ for CeoCiklusOd250Minuta in range(0,50):
         #pyautogui.click(CliclToStartCraft)
         pyautogui.press('space')
         
-        for WCraft in range(0,5):
+        for WCraft in range(0,6):
             if RandomCraftWeapon == 2:
-                for craftweapon in range(0,5):
+                #for craftweapon in range(0,6):
                     pyautogui.click(Weapon)
                     pyautogui.click(WeaponKnife)
                     pyautogui.click(WeaponKnifeIcePick)
             elif RandomCraftWeapon >2:
-                for craftweapon in range(0,5):
+                #for craftweapon in range(0,6):
                     pyautogui.click(Weapon)
                     pyautogui.click(WeaponKnife)
                     pyautogui.click(WeaponKnifeSwiftBlade)
@@ -112,14 +113,14 @@ for CeoCiklusOd250Minuta in range(0,50):
         ######## Craft new item swords  #############
         #pyautogui.click(CliclToStartCraft)
         pyautogui.press('space')
-        for WCraft in range(0,5):
+        for WCraft in range(0,6):
             if RandomCraftWeapon == 2:
-                for craftweapon in range(0,5):
+                #for craftweapon in range(0,5):
                     pyautogui.click(Armor)
                     pyautogui.click(ArmorMetal)
                     pyautogui.click(ArmorMetalBreatPlate)
             elif RandomCraftWeapon >2:
-                for craftweapon in range(0,5):
+                #for craftweapon in range(0,5):
                     pyautogui.click(Armor)
                     pyautogui.click(ArmorMetal)
                     pyautogui.click(ArmorMetalIronMail)
@@ -131,7 +132,7 @@ for CeoCiklusOd250Minuta in range(0,50):
         ##########################################    
     
     pyautogui.click(x=1096,y=450)
-    time.sleep(300)
+    time.sleep(420)
     
 
 
