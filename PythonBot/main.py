@@ -4,6 +4,7 @@ from time import sleep
 DELAY_BETWEEN_COMMANDS = 1.00
 
 
+
 def main():
     
     initializePyAutoGUI()
