@@ -9,7 +9,7 @@ def initializePyAutoGUI():
     # When fail-safe mode is True, moving the mouse to the upper-left corner will abort your program.
     pyautogui.FAILSAFE = True
 time.sleep(1)
-for CeoCiklusOd250Minuta in range(0,20):
+for CeoCiklusOd250Minuta in range(0,50):
     #time.sleep(1)
     ClickToStartSell = [687,136]
     ClickToSmallTalk = [373,521]
@@ -50,45 +50,49 @@ for CeoCiklusOd250Minuta in range(0,20):
         time.sleep(.15)
         pyautogui.click(ClickToSell)
         time.sleep(.15)
-    # ######## crafting #############
-    # RandomCraft = random.randint(1,3)
+    ######## crafting #############
+    RandomCraft = random.randint(1,3)
     
-    # if RandomCraft == 2:
-    #     ######## Craft new item Bow #############
-    #     pyautogui.click(CliclToStartCraft)
-    #     for BowCraft in range(0,5):
-    #         #pyautogui.click(CliclToStartCraft)
-    #         pyautogui.click(Weapon)
-    #         time.sleep(0.2)
-    #         pyautogui.click(WeaponBow)
-    #         time.sleep(0.2)
-    #         pyautogui.click(WeaponBowWlmwood)
-    #         time.sleep(0.2)
-    #     ##########################################
-    # elif RandomCraft > 2:
-    #     ######## Craft new item Knifes #############
-    #     pyautogui.click(CliclToStartCraft)
-    #     for KnifeCraft in range(0,5):
-    #         #pyautogui.click(CliclToStartCraft)
-    #         pyautogui.click(Weapon)
-    #         time.sleep(0.2)
-    #         pyautogui.click(WeaponKnife)
-    #         time.sleep(0.2)
-    #         pyautogui.click(WeaponKnifeIcePick)
-    #         time.sleep(0.2)
-    #     ##########################################
-    # else:
-    #     ######## Craft new item swords  #############
-    #     pyautogui.click(CliclToStartCraft)
-    #     for KnifeCraft in range(0,5):
-    #         #pyautogui.click(CliclToStartCraft)
-    #         pyautogui.click(Weapon)
-    #         time.sleep(0.2)
-    #         pyautogui.click(WeaponKnife)
-    #         time.sleep(0.2)
-    #         pyautogui.click(WeaponKnifeSwiftBlade)
-    #         time.sleep(0.2)
-    #     ##########################################    
+    if RandomCraft == 2:
+        ######## Craft new item Bow #############
+        pyautogui.click(CliclToStartCraft)
+        for BowCraft in range(0,5):
+            #pyautogui.click(CliclToStartCraft)
+            pyautogui.click(Weapon)
+            time.sleep(0.2)
+            pyautogui.click(WeaponBow)
+            time.sleep(0.2)
+            pyautogui.click(WeaponBowWlmwood)
+            time.sleep(0.2)
+        ##########################################
+    elif RandomCraft > 2:
+        ######## Craft new item Knifes #############
+        pyautogui.click(CliclToStartCraft)
+        for KnifeCraft in range(0,5):
+            #pyautogui.click(CliclToStartCraft)
+            pyautogui.click(Weapon)
+            time.sleep(0.2)
+            pyautogui.click(WeaponKnife)
+            time.sleep(0.2)
+            pyautogui.click(WeaponKnifeIcePick)
+            time.sleep(0.2)
+        ##########################################
+    else:
+        ######## Craft new item swords  #############
+        pyautogui.click(CliclToStartCraft)
+        for KnifeCraft in range(0,5):
+            #pyautogui.click(CliclToStartCraft)
+            pyautogui.click(Weapon)
+            time.sleep(0.2)
+            pyautogui.click(WeaponKnife)
+            time.sleep(0.2)
+            pyautogui.click(WeaponKnifeSwiftBlade)
+            time.sleep(0.2)
+        ##########################################    
     
-    #pyautogui.click(x=871,y=400)
-    time.sleep(100)
+    pyautogui.click(x=871,y=400)
+    time.sleep(200)
+
+
+#import pyautogui 
+#print(pyautogui.size()) 
