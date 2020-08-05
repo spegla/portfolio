@@ -15,7 +15,7 @@ time.sleep(2)
 for CeoCiklusOd250Minuta in range(0,50):
     #time.sleep(1)
     Reconnect = [574,502]
-    ClickToStartSell = [687,136]
+    ClickToStartSell = [694,166]
     ClickToSmallTalk = [373,521]
     ClickToSuggest = [414,462]
     ClickToSell = [764,586]
@@ -68,7 +68,7 @@ for CeoCiklusOd250Minuta in range(0,50):
     if RandomCraftType == 2:
         ######## Craft new item Bow #############
         #pyautogui.click(CliclToStartCraft)
-        pyautogui.key(space)
+        pyautogui.press('space')
         for WCraft in range(0,5):
             if RandomCraftWeapon == 2:
                 for craftweapon in range(0,5):
@@ -89,7 +89,8 @@ for CeoCiklusOd250Minuta in range(0,50):
     elif RandomCraftType > 2:
         ######## Craft new item Knifes #############
         #pyautogui.click(CliclToStartCraft)
-        pyautogui.key(space)
+        pyautogui.press('space')
+        
         for WCraft in range(0,5):
             if RandomCraftWeapon == 2:
                 for craftweapon in range(0,5):
@@ -110,7 +111,7 @@ for CeoCiklusOd250Minuta in range(0,50):
     else:
         ######## Craft new item swords  #############
         #pyautogui.click(CliclToStartCraft)
-        pyautogui.key(space)
+        pyautogui.press('space')
         for WCraft in range(0,5):
             if RandomCraftWeapon == 2:
                 for craftweapon in range(0,5):
@@ -129,7 +130,8 @@ for CeoCiklusOd250Minuta in range(0,50):
                 pyautogui.click(ArmorMetalScaleArmor)
         ##########################################    
     
-    pyautogui.click(x=871,y=400)
+    pyautogui.click(x=1096,y=450)
     time.sleep(300)
+    
 
 
