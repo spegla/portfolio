@@ -59,9 +59,13 @@ for CeoCiklusOd250Minuta in range(0,50):
     ######## sell & surcharge item #############
     for selling in range(0,10):
         pyautogui.click(ClickToStartSell)
+        time.sleep(.15)
         pyautogui.click(ClickToSmallTalk)
+        time.sleep(.15)
         pyautogui.click(ClickToSuggest)
+        time.sleep(.15)
         pyautogui.click(ClickToSell)
+        time.sleep(.15)
         pyautogui.click(x=1096,y=450)
     ######## crafting #############
     RandomCraftType = random.randint(1,3)
