@@ -94,5 +94,3 @@ for CeoCiklusOd250Minuta in range(0,50):
     time.sleep(200)
 
 
-#import pyautogui 
-#print(pyautogui.size()) 
