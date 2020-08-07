@@ -47,18 +47,17 @@ for CeoCiklusOd250Minuta in range(0,150):
     ArmorMetalIronMail = [430,750]
     ArmorMetalScaleArmor = [310,750]
     
-    
-    
+        
     ##############START POSITION##################
     for a in range(0,3):
     
-    for i in range(0,3):
-        pyautogui.moveTo(1000,45, duration = 0.1)
-        pyautogui.dragRel(-785,-719, duration = 0.5)
+        for i in range(0,3):
+            pyautogui.moveTo(1000,45, duration = 0.1)
+            pyautogui.dragRel(-785,-719, duration = 0.5)
 
-    pyautogui.moveTo(785, 719, duration = 0.2)
-    pyautogui.dragRel(0,-360, duration = 1)
-    pyautogui.dragRel(334,0, duration = 1)
+        pyautogui.moveTo(785, 719, duration = 0.2)
+        pyautogui.dragRel(0,-360, duration = 1)
+        pyautogui.dragRel(334,0, duration = 1)
     ##############START POSITION##################
     
     ######## finish crafted item  #############
@@ -69,6 +68,7 @@ for CeoCiklusOd250Minuta in range(0,150):
         pyautogui.click(BluePrintConfirm)
         time.sleep(.15)
     ##########################################
+    
     ######## sell & surcharge item #############
     for selling in range(0,10):
         pyautogui.click(ClickToStartSell)
@@ -80,6 +80,7 @@ for CeoCiklusOd250Minuta in range(0,150):
         pyautogui.click(ClickToSell)
         time.sleep(.2)
         #pyautogui.click(x=1096,y=450)
+        
     ######## crafting #############
     pyautogui.click(x=1096,y=450)
     RandomCraftType = random.randint(1,3)
