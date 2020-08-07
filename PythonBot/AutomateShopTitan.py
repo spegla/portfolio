@@ -151,7 +151,17 @@ for CeoCiklusOd250Minuta in range(0,150):
         ##########################################    
     
     pyautogui.click(x=1096,y=450)
-    time.sleep(420)
+    #time.sleep(420)
+    x=11
+    for countime in range(0,10):
+    #while True:
+        localtime = time.localtime()
+        result = time.strftime("%I:%M:%S %p", localtime)
+        y = x-1
+        print(y,"-","Countdown:", result)
+        time.sleep(44)
+        x= y
+    
     
 
 

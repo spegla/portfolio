@@ -21,3 +21,12 @@ for a in range(0,3):
 #pyautogui.dragRel(100, 0, duration = 1)
 #print(pyautogui.size()) 
 
+x=0
+    for countime in range(0,11):
+    #while True:
+        localtime = time.localtime()
+        result = time.strftime("%I:%M:%S %p", localtime)
+        y = x+1
+        print(y,"-","Countdown:", result)
+        time.sleep(40)
+        x= y
