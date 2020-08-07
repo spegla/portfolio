@@ -12,7 +12,7 @@ def initializePyAutoGUI():
     # When fail-safe mode is True, moving the mouse to the upper-left corner will abort your program.
     pyautogui.FAILSAFE = True
 time.sleep(2)
-for CeoCiklusOd250Minuta in range(0,50):
+for CeoCiklusOd250Minuta in range(0,150):
     #time.sleep(1)
     Reconnect = [574,502]
     ClickToStartSell = [694,166]
@@ -48,6 +48,19 @@ for CeoCiklusOd250Minuta in range(0,50):
     ArmorMetalScaleArmor = [310,750]
     
     
+    
+    ##############START POSITION##################
+    for a in range(0,3):
+    
+    for i in range(0,3):
+        pyautogui.moveTo(1000,45, duration = 0.1)
+        pyautogui.dragRel(-785,-719, duration = 0.5)
+
+    pyautogui.moveTo(785, 719, duration = 0.2)
+    pyautogui.dragRel(0,-360, duration = 1)
+    pyautogui.dragRel(334,0, duration = 1)
+    ##############START POSITION##################
+    
     ######## finish crafted item  #############
     pyautogui.click(Reconnect)
     for PickupCr in range(0,10):
@@ -59,15 +72,16 @@ for CeoCiklusOd250Minuta in range(0,50):
     ######## sell & surcharge item #############
     for selling in range(0,10):
         pyautogui.click(ClickToStartSell)
-        time.sleep(.15)
+        time.sleep(.2)
         pyautogui.click(ClickToSmallTalk)
-        time.sleep(.15)
+        time.sleep(.2)
         pyautogui.click(ClickToSuggest)
-        time.sleep(.15)
+        time.sleep(.2)
         pyautogui.click(ClickToSell)
-        time.sleep(.15)
-        pyautogui.click(x=1096,y=450)
+        time.sleep(.2)
+        #pyautogui.click(x=1096,y=450)
     ######## crafting #############
+    pyautogui.click(x=1096,y=450)
     RandomCraftType = random.randint(1,3)
     RandomCraftWeapon = random.randint(1,3)
     if RandomCraftType == 2:
