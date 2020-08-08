@@ -1,34 +1,34 @@
-import pyautogui 
-import time
-from time import sleep
+import pyautogui
+#import pydirectinput
+import webbrowser   
+import time, sys, random
 
-pyautogui.FAILSAFE = True
-#pyautogui.FAILSAFE = False
+DELAY_BETWEEN_COMMANDS = 0.5
 
-time.sleep(1)
-#pyautogui.moveTo(785, 719, duration = 0.2)
-for a in range(0,3):
+
+def initializePyAutoGUI():
+    # Initialized PyAutoGUI
+    # https://pyautogui.readthedocs.io/en/latest/introduction.html
+    # When fail-safe mode is True, moving the mouse to the upper-left corner will abort your program.
+    pyautogui.FAILSAFE = True
+time.sleep(2)
+
+#pytautogui.press('space')
+StartQuest = [1080,810]
+PureGoldBar = [57,736]
+ExplorerArea = [773,584]
+CollectLootGold = [1006,821]
+SkipLoot = [1086,837] 
+DismisALL = [481,539] 
+CollectLoot = [500,656]
+GuildEventReward = [1124,58]
+
+for repeat inrange(0,20):
+    pyautogui.click(StartQuest)
+    time.sleep(1)
+    pyautogui.click(PureGoldBar)
+    time.sleep(1)
+    pyautogui.click(ExplorerArea)
+    time.sleep(7200)
     
-    for i in range(0,3):
-        pyautogui.moveTo(1000,45, duration = 0.1)
-        pyautogui.dragRel(-785,-719, duration = 0.5)
-
-    pyautogui.moveTo(785, 719, duration = 0.2)
-    pyautogui.dragRel(0,-360, duration = 1)
-    pyautogui.dragRel(334,0, duration = 1)
-#pyautogui.dragRel(-100, 0, duration = 1) 
-#pyautogui.dragRel(0, -100, duration = 1) 
-#pyautogui.dragRel(100, 0, duration = 1)
-#print(pyautogui.size()) 
-
-x=0
-    for countime in range(0,11):
-    #while True:
-        localtime = time.localtime()
-        result = time.strftime("%I:%M:%S %p", localtime)
-        y = x+1
-        print(y,"-","Countdown:", result)
-        time.sleep(40)
-        x= y
-        
-        
+    tratatata da li ce izmena da se vidi
