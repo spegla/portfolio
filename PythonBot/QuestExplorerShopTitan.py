@@ -23,12 +23,35 @@ DismisALL = [481,539]
 CollectLoot = [500,656]
 GuildEventReward = [1124,58]
 
-for repeat inrange(0,20):
+
+for donerequest in range (0,3):
+    pyautogui.click(CollectLootGold)
+    time.sleep(5)
+    pyautogui.click(SkipLoot)
+    time.sleep(10)
+    pyautogui.click(DismisALL)
+    time.sleep(5)
+    pyautogui.click(CollectLoot)
+    time.sleep(5)
+    pyautogui.click(GuildEventReward)
+    time.sleep(1)
+
+for repeat in range(0,20):
     pyautogui.click(StartQuest)
     time.sleep(1)
     pyautogui.click(PureGoldBar)
     time.sleep(1)
     pyautogui.click(ExplorerArea)
-    time.sleep(7200)
+    #time.sleep(7200) 
     
-    tratatata da li ce izmena da se vidi
+    pyautogui.click(x=1010,y=225)
+    x=11
+    for countime in range(0,10):
+        localtime = time.localtime()
+        result = time.strftime("%I:%M:%S %p", localtime)
+        y = x-1
+        print(y,"-","Countdown:", result)
+        time.sleep(1080)
+        x= y
+    
+    #3600 jedan sat
