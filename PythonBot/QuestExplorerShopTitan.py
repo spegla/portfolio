@@ -43,6 +43,7 @@ for repeat in range(0,20):
     time.sleep(1)
     pyautogui.click(ExplorerArea)
     #time.sleep(7200) 
+    pyautogui.click(GuildEventReward)
     
     pyautogui.click(x=1010,y=225)
     x=11
