@@ -25,7 +25,7 @@ time.sleep(random.randint(15,20))
 pyautogui.rightClick(select_mining_belt[0],select_mining_belt[1],2)
 pyautogui.moveTo(select_minigbelt_worpto0[0],select_minigbelt_worpto0[1],2)
 pyautogui.click()
-time.sleep(65)R
+time.sleep(65)
 #mining asteroid belt
 minig_asteroid1 = [966,242]
 minig_asteroid2 = [966,262]
@@ -58,7 +58,7 @@ time.sleep(60)
 pyautogui.hotkey('Shift', 'r')
 time.sleep(1)
     #Dock to station
-pyautogui.rightclick(230,296)
+pyautogui.click(230,296)
 pyautogui.moveTo(262,304,2)
 pyautogui.click()
 
