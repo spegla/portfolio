@@ -9,6 +9,7 @@ def initializePyAutoGUI():
     pyautogui.FAILSAFE = True
 
 time.sleep(3)
+
 #pyautogui.size()
 #FULL SCREEN
 
@@ -96,14 +97,15 @@ pyautogui.rightClick()
 pyautogui.moveTo(259,304,0.5)
 pyautogui.click()
 
+
 #Moving ORE TO HANGAR 
 time.sleep(random.randint(15,20))
 Ore_Hold_position = [470,651]
-pyautogui.moveTo(Ore_Hold_position)
+pyautogui.moveTo(Ore_Hold_position,0.5)
 pyautogui.rightClick()
 Ore_Select_All = [507,622]
-pyautogui.leftclick(ore_select_all)
+pyautogui.click(ore_select_all,0.5)
 ORE_move = [264,597]
-pyautogui.moveTo(ORE_move)
+pyautogui.moveTo(ORE_move,0.5)
 ORE_DragTo = [100,702]
 pyautogui.dragTo(ORE_DragTo,1.5,button='left')
