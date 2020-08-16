@@ -10,6 +10,7 @@ def initializePyAutoGUI():
 
 time.sleep(3)
 
+
 #pyautogui.size()
 #FULL SCREEN
 
@@ -59,9 +60,10 @@ time.sleep(0.5)
 pyautogui.keyDown('w')
 time.sleep(0.2)
 pyautogui.keyUp('w')
-time.sleep(random.randint(15,20))
-pyautogui.leftClick(lock_target[0],lock_target[1],2)
-time.sleep(0.5)
+time.sleep(random.randint(20,25))
+pyautogui.moveTo(lock_target[0],lock_target[1],2)
+pyautogui.click()
+time.sleep(1)
 pyautogui.keyDown('F1')
 time.sleep(0.2)
 pyautogui.keyUp('F1')
@@ -96,16 +98,12 @@ pyautogui.moveTo(230,294,0.5)
 pyautogui.rightClick()
 pyautogui.moveTo(259,304,0.5)
 pyautogui.click()
+time.sleep(random.randint(13,18))
 
-
-#Moving ORE TO HANGAR 
-time.sleep(random.randint(15,20))
-Ore_Hold_position = [470,651]
-pyautogui.moveTo(Ore_Hold_position,0.5)
+    #Moving ORE TO HANGAR 
+pyautogui.moveTo(378,577,1)
 pyautogui.rightClick()
-Ore_Select_All = [507,622]
-pyautogui.click(ore_select_all,0.5)
-ORE_move = [264,597]
-pyautogui.moveTo(ORE_move,0.5)
-ORE_DragTo = [100,702]
-pyautogui.dragTo(ORE_DragTo,1.5,button='left')
+pyautogui.moveTo(412,586,1)
+pyautogui.click()
+pyautogui.moveTo(264,597,1)
+pyautogui.dragTo(100,702,1.5,button='left')
