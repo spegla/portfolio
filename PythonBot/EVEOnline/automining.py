@@ -10,25 +10,30 @@ def initializePyAutoGUI():
 
 time.sleep(3)
 #pyautogui.size()
-
 #FULL SCREEN
-Undock_from_station = [1020,272]
-select_mining_tab = [953,160]
-select_mining_belt = [971,223]
-select_minigbelt_worpto0 = [964,230]
+
 #exit undock from space station
+Undock_from_station = [1020,272]
 pyautogui.moveTo(Undock_from_station[0],Undock_from_station[1],1)
 pyautogui.click()
 time.sleep(random.randint(15,20))
 #select mining TAB
-pyatuogui.moveTo(select_mining_tab[0],select_mining_tab[1],1)
+select_mining_tab = [953,160]
+pyautogui.moveTo(select_mining_tab[0],select_mining_tab[1],1)
 pyautogui.click()
 time.sleep(0.5)
 #go to mining  post
-pyautogui.rightClick(select_mining_belt[0],select_mining_belt[1],1)
-pyautogui.moveTo(select_minigbelt_worpto0[0],select_minigbelt_worpto0[1],1)
-pyautogui.click()
+select_mining_belt = [971,223]
+select_minigbelt_worpto0 = [964,230]
+pyautogui.doubleClick(select_mining_belt[0],select_mining_belt[1],1)
+pyautogui.keyDown('s')
+time.sleep(0.25)
+pyautogui.keyUp('s')
 time.sleep(35)
+# pyautogui.rightClick(select_mining_belt[0],select_mining_belt[1],1)
+# pyautogui.moveTo(select_minigbelt_worpto0[0],select_minigbelt_worpto0[1],1)
+# pyautogui.click()
+
 #mining asteroid belt
 minig_asteroid1 = [966,242]
 minig_asteroid2 = [966,262]
@@ -38,35 +43,6 @@ start_afterburner = [824,763]
 lock_target = [1023,83]
 
 #get drones out
-# pyautogui.hotkey('Shift', 'f')
-# pyautogui.hotkey('Alt', 'F2')
-# pyautogui.hotkey('Alt', 'F3')
-#MINING FIRST ASTEROID
-pyautogui.moveTo(minig_asteroid1[0],minig_asteroid1[1],2)
-pyautogui.doubleClick()
-
-time.sleep(30)
-pyautogui.moveTo(lock_target[0],lock_target[1],2)
-time.sleep(1)
-pyautogui.keyDown('w')
-time.sleep(0.2)
-pyautogui.keyUp('w')
-pyautogui.keyDown('F1')
-time.sleep(0.2)
-pyautogui.keyUp('F1')
-#MINING SECOUND ASTEROID
-pyautogui.doubleClick(minig_asteroid2[0],minig_asteroid2[1],2)
-time.sleep(3)
-pyautogui.moveTo(lock_target[0],lock_target[1],2)
-time.sleep(1)
-pyautogui.hotkey('F2')
-#this is a time to full fill cargo 5000m3
-#time.sleep(2479)
-#get drones out
-pyautogui.keyDown('shiftleft')
-pyautogui.press('f')
-pyautogui.keyUp('shiftleft') 
-time.sleep(0.5)
 pyautogui.keyDown('altleft')
 pyautogui.press('F2')
 pyautogui.keyUp('altleft') 
@@ -75,7 +51,39 @@ pyautogui.keyDown('altleft')
 pyautogui.press('F3')
 pyautogui.keyUp('altleft') 
 time.sleep(0.5)
-time.sleep(60)
+#MINING FIRST ASTEROID
+pyautogui.moveTo(minig_asteroid1[0],minig_asteroid1[1],2)
+pyautogui.doubleClick()
+time.sleep(0.5)
+pyautogui.keyDown('w')
+time.sleep(0.2)
+pyautogui.keyUp('w')
+time.sleep(random.randint(15,20))
+pyautogui.moveTo(lock_target[0],lock_target[1],2)
+time.sleep(0.5)
+pyautogui.keyDown('F1')
+time.sleep(0.2)
+pyautogui.keyUp('F1')
+time.sleep(0.5)
+pyautogui.keyDown('F2')
+time.sleep(0.2)
+pyautogui.keyUp('F2')
+#MINING SECOUND ASTEROID
+# pyautogui.leftClick(minig_asteroid2[0],minig_asteroid2[1],2)
+# time.sleep(3)
+# pyautogui.moveTo(lock_target[0],lock_target[1],2)
+# time.sleep(1)
+# time.sleep(random.randint(15,20))
+# pyautogui.hotkey('F2')
+#this is a time to full fill cargo 5000m3
+#time.sleep(2479)
+#get drones out
+pyautogui.keyDown('shiftleft')
+pyautogui.press('f')
+pyautogui.keyUp('shiftleft') 
+
+#time to wait to full fill cargo
+time.sleep(70)
 #GO HOME
     #drow back your drones
 pyautogui.keyDown('shiftleft')
