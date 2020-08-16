@@ -59,7 +59,7 @@ pyautogui.keyDown('w')
 time.sleep(0.2)
 pyautogui.keyUp('w')
 time.sleep(random.randint(15,20))
-pyautogui.moveTo(lock_target[0],lock_target[1],2)
+pyautogui.leftClick(lock_target[0],lock_target[1],2)
 time.sleep(0.5)
 pyautogui.keyDown('F1')
 time.sleep(0.2)
@@ -91,6 +91,19 @@ pyautogui.press('r')
 pyautogui.keyUp('shiftleft') 
 time.sleep(1)
     #Dock to station
-pyautogui.click(230,296)
-pyautogui.moveTo(262,304,2)
+pyautogui.moveTo(230,294,0.5)
+pyautogui.rightClick()
+pyautogui.moveTo(259,304,0.5)
 pyautogui.click()
+
+#Moving ORE TO HANGAR 
+time.sleep(random.randint(15,20))
+Ore_Hold_position = [470,651]
+pyautogui.moveTo(Ore_Hold_position)
+pyautogui.rightClick()
+Ore_Select_All = [507,622]
+pyautogui.leftclick(ore_select_all)
+ORE_move = [264,597]
+pyautogui.moveTo(ORE_move)
+ORE_DragTo = [100,702]
+pyautogui.dragTo(ORE_DragTo,1.5,button='left')
