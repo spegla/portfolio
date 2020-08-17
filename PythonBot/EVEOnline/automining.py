@@ -9,7 +9,7 @@ def initializePyAutoGUI():
     pyautogui.FAILSAFE = True
 
 for i in range(0,10):
-    time.sleep(3)
+    time.sleep(2)
 
     #pyautogui.size()
     #FULL SCREEN
