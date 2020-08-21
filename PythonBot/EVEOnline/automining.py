@@ -8,7 +8,7 @@ def initializePyAutoGUI():
     # When fail-safe mode is True, moving the mouse to the upper-left corner will abort your program.
     pyautogui.FAILSAFE = True
 
-for i in range(0,10):
+for i in range(0,10000):
     time.sleep(2)
 
     #pyautogui.size()
@@ -60,9 +60,9 @@ for i in range(0,10):
     pyautogui.moveTo(minig_asteroid1[0],minig_asteroid1[1],2)
     pyautogui.doubleClick()
     time.sleep(0.5)
-    pyautogui.keyDown('q')
+    pyautogui.keyDown('w')
     time.sleep(0.2)
-    pyautogui.keyUp('q')
+    pyautogui.keyUp('w')
     time.sleep(random.randint(20,25))
     pyautogui.moveTo(lock_target[0],lock_target[1],2)
     pyautogui.click()
@@ -70,14 +70,14 @@ for i in range(0,10):
     pyautogui.keyDown('F1')
     time.sleep(0.2)
     pyautogui.keyUp('F1')
-    time.sleep(0.5)
+    time.sleep(1)
     #MINING SECOUND ASTEROID
     pyautogui.moveTo(minig_asteroid2[0],minig_asteroid2[1],2)
     pyautogui.click()
-    time.sleep(0.5)
+    time.sleep(1)
     pyautogui.moveTo(lock_target[0],lock_target[1],2)
     pyautogui.click()
-    time.sleep(1)
+    time.sleep(2)
     pyautogui.moveTo(692,54,2)
     pyautogui.click()
     pyautogui.keyDown('F2')
@@ -85,19 +85,24 @@ for i in range(0,10):
     pyautogui.keyUp('F2')
     
     #deploy droness
-    time.sleep(20)
+    time.sleep(60)
     pyautogui.keyDown('shiftleft')
     pyautogui.press('f')
     pyautogui.keyUp('shiftleft') 
 
     #time to wait to full fill cargos
-    time.sleep(600)
+    time.sleep(130)
     #GO HOME
         #drow back your drones
     pyautogui.keyDown('shiftleft')
     pyautogui.press('r')
     pyautogui.keyUp('shiftleft') 
     time.sleep(3)
+    pyautogui.keyDown('shiftleft')
+    pyautogui.press('r')
+    pyautogui.keyUp('shiftleft') 
+    time.sleep(5)
+    
         #Dock to station
     pyautogui.moveTo(211,363,1)
     pyautogui.rightClick()
