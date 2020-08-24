@@ -13,15 +13,18 @@ for i in range(1,100000):
     MainTAb = [140,12]
     SecoundTAB = [340,12]
     SecoundTABClose = [470,22]
-
+    
+    
     time.sleep(1)
     pyautogui.moveTo(MainTAb[0],MainTAb[1],1)
     pyautogui.click()
 
     pyautogui.moveTo(295,187,1) # Go to Menu Earn Points
-    pyautogui.moveTo(278,592,1) # Go to Website Hits
+    pyautogui.moveTo(291,340,1) # Go to Youtube
+    pyautogui.moveTo(448,342,1) # Go to Youtube Views
     pyautogui.click()
     time.sleep(1)
+    
     pyautogui.moveTo(215,460,0.2) # click on visit sometimes move down or up
     pyautogui.click()
     pyautogui.moveTo(215,477,0.2) # click on visit sometimes move down or up
