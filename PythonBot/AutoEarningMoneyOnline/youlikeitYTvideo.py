@@ -23,25 +23,21 @@ for i in range(1,100000):
     pyautogui.moveTo(291,340,1) # Go to Youtube
     pyautogui.moveTo(448,342,1) # Go to Youtube Views
     pyautogui.click()
-    time.sleep(1)
+    time.sleep(3)
     
-    pyautogui.moveTo(215,460,0.2) # click on visit sometimes move down or up
+    pyautogui.moveTo(574,557,0.5) # click on visit sometimes move down or up
     pyautogui.click()
-    pyautogui.moveTo(215,477,0.2) # click on visit sometimes move down or up
+    pyautogui.moveTo(574,571,0.5) # click on visit sometimes move down or up
     pyautogui.click()
-    pyautogui.moveTo(215,493,0.2) # click on visit sometimes move down or up
+    pyautogui.moveTo(574,550,0.5) # click on visit sometimes move down or up
     pyautogui.click()
-    pyautogui.moveTo(212,519,0.2) # click on visit sometimes move down or up
-    pyautogui.click()
-    pyautogui.moveTo(207,514,0.2) # click on visit sometimes move down or up
-    pyautogui.click()
+    #time.sleep(170)
     
-    time.sleep(21)
-    
-    pyautogui.moveTo(SecoundTABClose[0],SecoundTABClose[1],1) # closing secound TAB
-    pyautogui.click()
-    time.sleep(0.5)
-    pyautogui.moveTo(680,173) # closing button Leave when close secound tab
-    pyautogui.click()
-    time.sleep(0.5)
-    
+    x=17
+    for countime in range(0,x):
+        localtime = time.localtime()
+        result = time.strftime("%I:%M:%S %p", localtime)
+        y = x-1
+        print(y,"-","Countdown:", result)
+        time.sleep(10)
+        x= y
